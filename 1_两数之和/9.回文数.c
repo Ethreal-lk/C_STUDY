@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-07-08 09:15:31
- * @LastEditTime: 2021-07-08 10:35:41
+ * @LastEditTime: 2021-07-08 13:08:12
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \C\LeetcodePractice\1_两数之和\9.回文数.c
@@ -45,6 +45,6 @@ while (x > 0)
 }
 return 1;
 }
-//这是用来测试功能的注释
+//测试vscode中上传代码到git
 // @lc code=end
 
