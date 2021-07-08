@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-07-06 16:59:18
- * @LastEditTime: 2021-07-07 08:57:21
+ * @LastEditTime: 2021-07-08 13:47:43
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \C\.vscode\KATA_Practise\2_.C
@@ -25,7 +25,11 @@
 
 
 int tickets(size_t length,  int people[length]);
-
+/**
+ * @description: 计算找零是否可以找的开；  只能通过前面收到的钱去给后面的人找零，不能全部统计出来，再分配
+ * @param {*}
+ * @return {*}
+ */
 
 int main() {
 
