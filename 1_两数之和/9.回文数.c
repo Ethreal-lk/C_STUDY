@@ -45,5 +45,6 @@ while (x > 0)
 }
 return 1;
 }
+//这是用来测试功能的注释
 // @lc code=end
 
