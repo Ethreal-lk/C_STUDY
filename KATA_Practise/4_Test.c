@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-07-07 12:22:04
- * @LastEditTime: 2021-07-09 12:12:12
+ * @LastEditTime: 2021-07-09 15:31:35
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \C\.vscode\KATA_Practise\4_Test.c
@@ -55,4 +55,31 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize){
   }
   return returnSize;
 
+}
+/**
+ * @description: 
+ * @param {*}
+ * @return {*}
+ */
+//复杂方法
+int digital_root(int n) {
+  
+  if (n < 10)  return n ;
+  int sum = 0 ;
+  while (n > 0)
+  {
+    sum += n % 10 ;
+    n /= 10; 
+  }
+  return digital_root(sum);
+  
+}
+/*
+简单方法
+比如num=1000*a+100*b+10*c+d；
+可以写成num=999*a+99*b+9*c+(a+b+c+d)；
+如果(a+b+c+d) > 10, 重复上述步骤。
+*/
+int digital_root(int n) {
+  return (n-1)%9 + 1;
 }
