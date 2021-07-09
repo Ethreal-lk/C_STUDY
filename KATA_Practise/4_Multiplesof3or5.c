@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-07-09 09:05:42
- * @LastEditTime: 2021-07-09 11:18:01
+ * @LastEditTime: 2021-07-09 11:21:51
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \C\.vscode\C_CLASSES\KATA_Practise\4_Multiplesof3or5.c
@@ -42,7 +42,14 @@ int solution(int number) {
     return sum ; 
   }
 }
-
+/**
+ * @description:计算达到人口的年限 
+ * @param {int} p0
+ * @param {double} percent
+ * @param {int} aug
+ * @param {int} p
+ * @return {*}
+ */
 int nbYear(int p0, double percent, int aug, int p) {
     
   int number = 0;
