@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-07-07 12:22:04
- * @LastEditTime: 2021-07-08 09:42:12
+ * @LastEditTime: 2021-07-09 12:12:12
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \C\.vscode\KATA_Practise\4_Test.c
@@ -30,6 +30,15 @@ int main () {
        return 0;
   
 }
+/**
+ * @description: 返回数组中相加等于目标值的下标
+ *                注意要使用动态分配内存存放数据
+ * @param {int*} nums
+ * @param {int} numsSize
+ * @param {int} target
+ * @param {int*} returnSize
+ * @return {*}
+ */
 int* twoSum(int* nums, int numsSize, int target, int* returnSize){
 
   int * ptr = returnSize;
