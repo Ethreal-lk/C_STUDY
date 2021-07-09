@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-07-09 09:05:42
- * @LastEditTime: 2021-07-09 09:41:54
+ * @LastEditTime: 2021-07-09 11:18:01
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \C\.vscode\C_CLASSES\KATA_Practise\4_Multiplesof3or5.c
@@ -42,3 +42,15 @@ int solution(int number) {
     return sum ; 
   }
 }
+
+int nbYear(int p0, double percent, int aug, int p) {
+    
+  int number = 0;
+  while (p0 < p) { 
+    p0 = p0 * (1 + percent / 100) + aug;
+    number++;
+  }
+  return number;
+  //return number < 0 ? number : number<  13 ?  number - 1 : number -2;   三目运算符
+
+  }
