@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-07-09 09:05:42
- * @LastEditTime: 2021-07-09 09:29:05
+ * @LastEditTime: 2021-07-09 09:41:54
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \C\.vscode\C_CLASSES\KATA_Practise\4_Multiplesof3or5.c
@@ -23,7 +23,7 @@ int main() {
     int temp = solution(10);
     printf("%d ",temp);
 }
-
+// 计算小于给出数字能被3或者5整除的数之和;
 int solution(int number) {
 		
     int sum = 0 ;
