@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-07-13 15:45:02
- * @LastEditTime: 2021-07-13 16:08:20
+ * @LastEditTime: 2021-07-13 16:33:54
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \C\.vscode\C_CLASSES\KATA_Practise\array.c
@@ -34,8 +34,14 @@ int main() {
   printf("%d , %d\n", *(a3 + 0), *(a3 + 0) + 1);
   printf(" %d  %d ", a3[0], a3[0 + 1]);
   //a : 代表第0行的首地址
-  //a + i : 代表的第i行首地址
+  //a + i : &a[i]
   // *（0 + i）第i行元素首地址
   //*（a + i）+j —— >&a[i][j]：第i行第j列元素的地址；
   //*(*(a + i) + j )- > 第i行第j列元素的值
+
+  //定义一个数组指针
+  //指向一维数组的整个数组首地址
+  int (*P)[4];
+  //P = &a;  //整个二维数组的首地址 内部 p = a 
+  P = a;      //第零行首地址
 }
