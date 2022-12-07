@@ -32,9 +32,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <windows.h>
-#include <test.h>
+#include <user_lib.h>
 
-// static void test_elog(void);
 
 int main(void) {
     /* close printf buffer */
@@ -61,35 +60,8 @@ int main(void) {
 //    elog_set_filter_kw("Hello");
     /* dynamic set output logs's tag filter */
 //    elog_set_filter_tag_lvl("main", ELOG_LVL_WARN);
-
-    /* test logger output */
-    // test_elog();
-    for (int i = 0; i < 10; i++){
-        test_Func(i);
-        Sleep(1000);
-    }
-
+    ch_string();
+    test_elog();
 
     return EXIT_SUCCESS;
 }
-
-/**
- * EasyLogger demo
- */
-// void test_elog(void) {
-//     int i = 0;
-
-//     while(true) {
-
-//         /* test log output for all level */
-//         log_a("number%d : Hello EasyLogger!", i);
-//         log_e("Hello EasyLogger!");
-//         log_w("Hello EasyLogger!");
-//         log_i("Hello EasyLogger!");
-//         log_d("Hello EasyLogger!");
-//         log_v("Hello EasyLogger!");
-// //        elog_raw("Hello EasyLogger!");
-//         Sleep(1000);
-//         i++;
-//     }
-// }
