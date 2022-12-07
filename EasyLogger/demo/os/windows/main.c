@@ -61,7 +61,8 @@ int main(void) {
     /* dynamic set output logs's tag filter */
 //    elog_set_filter_tag_lvl("main", ELOG_LVL_WARN);
     ch_string();
-    test_elog();
+    // test_elog();
+    Sleep(100000);
 
     return EXIT_SUCCESS;
 }

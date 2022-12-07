@@ -1,5 +1,6 @@
 #include <user_lib.h>
 #include <elog.h>
+#include <stdio.h>
 #include <windows.h>
 #include <string.h>
 #define MAXSIZE 100
@@ -19,12 +20,24 @@ void ch_string(){
         string[i] = (char*)malloc(sizeof(char) * 100);
         log_e("string[%d] address: 0x%x", i, string[i]);
     }
+    memset(string[0], '0', 100);
+        for (int i = 0; i < 100; i++){
+        log_e("%c ", *(string[0] + i));
+    }
+    log_e("first end !");
     strcpy(string[0], STRING_1);
+
+    for (int i = 0; i < 100; i++){
+        log_e("%c ", *(string[0] + i));
+    }    
     strcpy(string[1], STRING_2);
     strcpy(string[2], STRING_3);
     log_e("string[1]: %s", string[0]);
     log_e("string[2]: %s", string[1]);
     log_e("string[3]: %s", string[2]);
+    free(string[0]);
+    free(string[1]);
+    free(string[2]);
     
     
 }
