@@ -16,7 +16,9 @@
   */ 
 	
 #include "stm32f10x.h"
-#include "stm32f10x_gpio.h"
+#include "key.h"
+
+
 
 #define DELAY_TIME_MS 50
 void delay_us(uint32_t delay_us)
@@ -58,7 +60,7 @@ void delay_ms(uint16_t delay_ms)
 int main(void)
 {	
 
-
+    Key_PGIO_Config();
     for (uint16_t i = 0; i < 0xff; i++ )
     {
       // printf ("hello world !");
