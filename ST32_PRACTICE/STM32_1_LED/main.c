@@ -40,12 +40,10 @@ int main(void)
 	// 开启GPIOB 端口时钟
 	RCC_APB2ENR |= (1<<3);
 
-	//清空控制PB1的端口位
+	//清空控制PB1/PB0/PB5的端口位
 	GPIOB->CRL &= ~( 0x0F<< (4*1) | (0x0F<< (4*0)) |(0x0F<< (4*5)));	
-	// 配置PB1为通用推挽输出，速度为10M
+	// 配置PB1/PB0/PB5为通用推挽输出，速度为10M
 	GPIOB->CRL |= ((1<<4*5) | (1<<4*0) | (1<<4*1));
-  	GPIO_SetBits(GPIOB,GPIO_Pin_5);
-    GPIO_SetBits(GPIOB,GPIO_Pin_0);
 	while (1)
 	{
 		// GPIO_SetBits(GPIOB,GPIO_Pin_5);
