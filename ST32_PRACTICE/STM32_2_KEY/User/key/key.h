@@ -1,5 +1,5 @@
-#ifndef _BSP_LED_
-#define _BSP_LED_
+#ifndef _BSP_KEY_
+#define _BSP_KEY_
 #include "stm32f10x.h"
 #include "stm32f10x_gpio.h"
 #include "stm32f10x_rcc.h"
