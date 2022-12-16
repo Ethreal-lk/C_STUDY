@@ -29,3 +29,4 @@
 .\objects\main.o: ..\..\Libraries\FWlib\inc\stm32f10x_wwdg.h
 .\objects\main.o: ..\..\Libraries\FWlib\inc\misc.h
 .\objects\main.o: ..\..\User\key\key.h
+.\objects\main.o: ..\..\User\led\led.h
