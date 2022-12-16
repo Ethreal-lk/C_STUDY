@@ -337,7 +337,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_HD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\Libraries\FWlib\inc;..\..\User;..\..\Libraries\CMSIS;..\..\User\key</IncludePath>
+              <IncludePath>..\..\Libraries\FWlib\inc;..\..\User;..\..\Libraries\CMSIS;..\..\User\key;..\..\User\led</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -465,6 +465,16 @@
               <FileName>key.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\..\User\key\key.h</FilePath>
+            </File>
+            <File>
+              <FileName>led.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\led\led.c</FilePath>
+            </File>
+            <File>
+              <FileName>led.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\User\led\led.h</FilePath>
             </File>
           </Files>
         </Group>

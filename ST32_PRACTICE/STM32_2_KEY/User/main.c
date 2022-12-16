@@ -18,37 +18,42 @@
 #include "stm32f10x.h"
 #include "key.h"
 #include "led.h"
-
-#define SOFT_DELAY Delay(0x0FFFFF);
-
 // void Delay(__IO u32 nCount); 
-
 /**
   * @brief  主函数
   * @param  无  
   * @retval 无
   */
+ //BUG 
 int main(void)
-{	
+{	  
+    uint8_t status = Bit_RESET;
+
 		LED_GPIO_Config();
     Key_PGIO_Config();
 
     while (1)
-    {
-      GPIO_SetBits(LED_GPIO_PORT,LED_RED | LED_BLUE | LED_GREEN);
-      delay_ms(50);
-      GPIO_ResetBits(LED_GPIO_PORT,LED_RED);
-      delay_ms(200);
-			GPIO_SetBits(LED_GPIO_PORT,LED_RED | LED_BLUE | LED_GREEN);
-      delay_ms(50);
-      GPIO_ResetBits(LED_GPIO_PORT,LED_BLUE);
-      delay_ms(200);
-			GPIO_SetBits(LED_GPIO_PORT,LED_RED | LED_BLUE | LED_GREEN);
-      delay_ms(50);
-      GPIO_ResetBits(LED_GPIO_PORT,LED_GREEN);
-      delay_ms(200);
+    { 
+      //test  测试按键
+      status = GPIO_ReadInputDataBit(KEY1_GPIO_PORT, KEY1_GPIO_PIN);
+      if (status == Bit_RESET)
+      {
+        GPIO_SetBits(LED_GPIO_PORT,LED_RED | LED_BLUE | LED_GREEN);
+      } else {
+        GPIO_ResetBits(LED_GPIO_PORT,LED_RED);
+      }
+      status = GPIO_ReadInputDataBit(KEY2_GPIO_PORT, KEY2_GPIO_PIN);
+      if (status == Bit_RESET)
+      {
+        GPIO_SetBits(LED_GPIO_PORT,LED_RED | LED_BLUE | LED_GREEN);
+      } else {
+        GPIO_ResetBits(LED_GPIO_PORT,LED_BLUE);
+      }
     }
 
+//todo
+//done
+//mark
 }
 
 
