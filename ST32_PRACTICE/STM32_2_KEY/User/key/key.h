@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #ifndef _BSP_KEY_
 #define _BSP_KEY_
 #include "stm32f10x.h"
@@ -25,3 +26,5 @@
 void Key_PGIO_Config(void);
 // uint8_t Key_Scan(GPIO_TypeDef* GPIOx,uint16_t GPIO_Pin);
 #endif
+=======
+>>>>>>> parent of 13adbf3 (添加Gpio初始函数)

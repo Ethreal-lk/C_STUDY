@@ -28,5 +28,8 @@
 .\objects\main.o: ..\..\Libraries\FWlib\inc\stm32f10x_usart.h
 .\objects\main.o: ..\..\Libraries\FWlib\inc\stm32f10x_wwdg.h
 .\objects\main.o: ..\..\Libraries\FWlib\inc\misc.h
+<<<<<<< HEAD
 .\objects\main.o: ..\..\User\key\key.h
 .\objects\main.o: ..\..\User\led\led.h
+=======
+>>>>>>> parent of 13adbf3 (添加Gpio初始函数)

@@ -379,6 +379,7 @@
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
+<<<<<<< HEAD
     <File>
       <GroupNumber>4</GroupNumber>
       <FileNumber>13</FileNumber>
@@ -427,6 +428,8 @@
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
+=======
+>>>>>>> parent of 13adbf3 (添加Gpio初始函数)
   </Group>
 
   <Group>

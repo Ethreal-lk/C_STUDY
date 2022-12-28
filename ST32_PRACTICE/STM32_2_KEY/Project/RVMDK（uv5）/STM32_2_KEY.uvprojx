@@ -337,7 +337,11 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_HD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
+<<<<<<< HEAD
               <IncludePath>..\..\Libraries\FWlib\inc;..\..\User;..\..\Libraries\CMSIS;..\..\User\key;..\..\User\led</IncludePath>
+=======
+              <IncludePath>..\..\Libraries\FWlib\inc;..\..\User;..\..\Libraries\CMSIS;..\..\User\led;..\..\User\led</IncludePath>
+>>>>>>> parent of 13adbf3 (添加Gpio初始函数)
             </VariousControls>
           </Cads>
           <Aads>
@@ -456,6 +460,7 @@
               <FileType>5</FileType>
               <FilePath>..\..\User\stm32f10x_it.h</FilePath>
             </File>
+<<<<<<< HEAD
             <File>
               <FileName>key.c</FileName>
               <FileType>1</FileType>
@@ -476,6 +481,8 @@
               <FileType>5</FileType>
               <FilePath>..\..\User\led\led.h</FilePath>
             </File>
+=======
+>>>>>>> parent of 13adbf3 (添加Gpio初始函数)
           </Files>
         </Group>
         <Group>

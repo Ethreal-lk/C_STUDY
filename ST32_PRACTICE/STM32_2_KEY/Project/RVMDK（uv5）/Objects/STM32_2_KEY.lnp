@@ -6,8 +6,11 @@
 ".\objects\stm32f10x_rcc.o"
 ".\objects\main.o"
 ".\objects\stm32f10x_it.o"
+<<<<<<< HEAD
 ".\objects\key.o"
 ".\objects\led.o"
+=======
+>>>>>>> parent of 13adbf3 (添加Gpio初始函数)
 --library_type=microlib --strict --scatter ".\Objects\STM32_2_KEY.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
