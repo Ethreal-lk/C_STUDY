@@ -1,0 +1,6 @@
+
+### IntelliJ IDEA ###
+*.exe
+
+### VS Code ###
+.vscode/
