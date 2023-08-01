@@ -12,7 +12,7 @@ int main()
 {
 	for (int i = 0; i < MAX_SIZE; i++)
 	{
-		printf("第%d次, hello world!\n", i + 1);
+		printf("number%d, hello world!\n", i + 1);
 	}
 	return 0;
 }
