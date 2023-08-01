@@ -14,5 +14,6 @@ int main()
 	{
 		printf("number%d, hello world!\n", i + 1);
 	}
+	printf("end\n");
 	return 0;
 }
