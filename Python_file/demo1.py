@@ -42,7 +42,7 @@ def match_and_click_center(
     screen_image: np.ndarray,
     threshold: float = 0.85,
     click: bool = True,
-    random_offset: int = 5
+    random_offset: int = 20
 ) -> tuple[int, int] | None:
     """
     模板匹配并返回中心坐标（可加随机偏移）
@@ -79,98 +79,32 @@ def match_and_click_center(
         center_x += random.randint(-random_offset,random_offset)
         center_y += random.randint(-random_offset,random_offset)
     return (center_x,center_y)
-# # 6. 执行按键操作
-# def press_key(key):
-#     pyautogui.press(key)
 
 # 主函数
 def main():
-    # # 找到模拟器窗口
-    # hwnd = find_window("MuMu模拟器121")
-    # left, top, width, height = get_window_info(hwnd)
-    # print(f"Window position: Left={left}, Top={top}, Width={width}, Height={height}")
-    # # 截取窗口并加载要识别的模板图像
-    # screen_image = capture_window(hwnd, left, top, width, height)
-    # # template_image = cv2.imread(r"E:\Study\C_STUDY\Python_file\test.png", cv2.IMREAD_GRAYSCALE)
-    # # if template_image is None:
-    # #     raise Exception("模板图像未找到或无法加载")
-
-    # # 转换为灰度图像进行匹配
-    # screen_gray = cv2.cvtColor(screen_image, cv2.COLOR_BGR2GRAY)
-
-    # center_x,center_y =  match_and_click_center(r"E:\Study\C_STUDY\Python_file\test.png",screen_gray)
-    # pyautogui.click(left + center_x, top + center_y)
-    # # 获取当前鼠标的位置
-    # mouse_x, mouse_y = pyautogui.position()
-    # print(f"Current mouse position: X={mouse_x}, Y={mouse_y}")
-    # hwnd = find_window("MuMu模拟器121")
-    # left, top, width, height = get_window_info(hwnd)
-    # print(f"Window position: Left={left}, Top={top}, Width={width}, Height={height}")
-    # # 截取窗口并加载要识别的模板图像
-    # screen_image = capture_window(hwnd, left, top, width, height)
-    # # template_image = cv2.imread(r"E:\Study\C_STUDY\Python_file\test.png", cv2.IMREAD_GRAYSCALE)
-    # # if template_image is None:
-    # #     raise Exception("模板图像未找到或无法加载")
-
-    # # 转换为灰度图像进行匹配
-    # screen_gray = cv2.cvtColor(screen_image, cv2.COLOR_BGR2GRAY)
-
-    # center_x,center_y =  match_and_click_center(r"E:\Study\C_STUDY\Python_file\tupian\tansuo.png",screen_gray)
-    # pyautogui.click(left + center_x, top + center_y)
-    # # 获取当前鼠标的位置
-    # mouse_x, mouse_y = pyautogui.position()
-    # print(f"Current mouse position: X={mouse_x}, Y={mouse_y}")
-
-
     while True:
-        hwnd = find_window("MuMu模拟器121")
-        left, top, width, height = get_window_info(hwnd)
-        # print(f"Window position: Left={left}, Top={top}, Width={width}, Height={height}")
-        # 截取窗口并加载要识别的模板图像
-        screen_image = capture_window(hwnd, left, top, width, height)
-        # template_image = cv2.imread(r"E:\Study\C_STUDY\Python_file\test.png", cv2.IMREAD_GRAYSCALE)
-        # if template_image is None:
-        #     raise Exception("模板图像未找到或无法加载")
-
-        # 转换为灰度图像进行匹配
-        screen_gray = cv2.cvtColor(screen_image, cv2.COLOR_BGR2GRAY)
-        center = match_and_click_center(r"E:\Study\C_STUDY\Python_file\tupian\tiaozhan.png",screen_gray)
-        if center:
-            pyautogui.click(left + center[0], top + center[1])
-            print(f"Clicked at: X={left + center[0]}, Y={top + center[1]}")
-            time.sleep(2)
-        center = match_and_click_center(r"E:\Study\C_STUDY\Python_file\tupian\zhunbei.png",screen_gray)
-        if center:
-            pyautogui.click(left + center[0], top + center[1])
-            print(f"Clicked at: X={left + center[0]}, Y={top + center[1]}")
-            time.sleep(2)
-        center = match_and_click_center(r"E:\Study\C_STUDY\Python_file\tupian\wancheng.png",screen_gray)
-        if center:
-            pyautogui.click(left + center[0], top + center[1])
-            print(f"Clicked at: X={left + center[0]}, Y={top + center[1]}")
-            time.sleep(2)
-        center = match_and_click_center(r"E:\Study\C_STUDY\Python_file\tupian\fail.png",screen_gray)
-        if center:
-            pyautogui.click(left + center[0], top + center[1])
-            print(f"Clicked at: X={left + center[0]}, Y={top + center[1]}")
-            time.sleep(2)
-    # location, confidence = match_image(template_image, screen_gray)
-    # print(f"Match location: {location}, Confidence: {confidence}")
-    # # If the confidence is high enough, perform a click operation
-    # if confidence > 0.8:  # You can adjust the threshold
-    #     print("Target location found, clicking!")
-    #     win32gui.SetForegroundWindow(hwnd)
-    #     time.sleep(2)  # 等待窗口激活
-    #     h,w = template_image.shape[:2]
-    #     center_x = location[0] + w // 2
-    #     center_y = location[1] + h // 2
-    #     pyautogui.click(left + center_x, top + center_y)
-    #     # 获取当前鼠标的位置
-    #     mouse_x, mouse_y = pyautogui.position()
-    #     print(f"Current mouse position: X={mouse_x}, Y={mouse_y}")
-    # else:
-    #     print("Target icon not found")
+        try:
+            hwnd = find_window("MuMu安卓设备1")
+            left, top, width, height = get_window_info(hwnd)
+            screen_image = capture_window(hwnd, left, top, width, height)
+            screen_gray = cv2.cvtColor(screen_image, cv2.COLOR_BGR2GRAY)
+            center = match_and_click_center(r"E:\Study\C_STUDY\Python_file\tupian\tiaozhan1.png",screen_gray)
+            if center:
+                pyautogui.click(left + center[0], top + center[1])
+                print(f"Clicked at: X={left + center[0]}, Y={top + center[1]}")
+                time.sleep(0.5)
+            center = match_and_click_center(r"E:\Study\C_STUDY\Python_file\tupian\huodong_jieguo.png",screen_gray)
+            if center:
+                pyautogui.click(left + center[0], top + center[1])
+                print(f"Clicked at: X={left + center[0]}, Y={top + center[1]}")
+                time.sleep(0.5)
+            time.sleep(0.1)
+        except Exception as e:
+            print(f"发生错误：{e}")
+            time.sleep(1)
+            continue
 
 if __name__ == "__main__":
-    main()
+    main() 
+
 
